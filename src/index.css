@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --border-color: #e2e8f0;
+  }
+
+  .dark {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --card-bg: #1e293b;
+    --primary: #3b82f6;
+    --primary-hover: #60a5fa;
+    --border-color: #334155;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 dark:bg-slate-900/10 backdrop-blur-lg border border-white/20 dark:border-slate-800/20 shadow-xl rounded-xl;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-slate-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all dark:border-slate-700 dark:bg-slate-800 dark:text-white;
+  }
+  
+  .skeleton {
+    @apply animate-pulse bg-gray-200 dark:bg-slate-700 rounded;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-500;
+}
