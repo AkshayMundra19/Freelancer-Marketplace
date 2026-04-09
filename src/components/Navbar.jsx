@@ -4,7 +4,10 @@ import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Menu, X, Bell, MessageSquare, Briefcase, User, LogOut, Palette } from 'lucide-react';
+import { FloatingGeometricMini } from './FloatingGeometric';
+
 import { useData } from '../contexts/DataContext';
+
 
 const Navbar = () => {
   const { currentUser, logout } = useAuth();
@@ -44,18 +47,18 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          <Link to="/" className="flex items-center gap-2">
-            <motion.div 
-              whileHover={{ rotate: 90 }}
-              transition={{ duration: 0.3 }}
-              className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-lg shadow-primary/20"
-            >
-              <Briefcase className="w-5 h-5 text-white" />
-            </motion.div>
-            <span className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary)] to-purple-500">
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 relative">
+              <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg group-hover:bg-primary/40 transition-all"></div>
+              <div className="relative z-10 w-full h-full">
+                <FloatingGeometricMini />
+              </div>
+            </div>
+            <span className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary)] via-purple-500 to-pink-500 tracking-tighter italic">
               WorkNet
             </span>
           </Link>
+
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">

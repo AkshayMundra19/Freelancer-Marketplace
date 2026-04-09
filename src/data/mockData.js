@@ -1,4 +1,5 @@
 export const initialJobs = [
+  // JOBS
   {
     id: 1,
     title: 'Senior React Developer Needed',
@@ -6,7 +7,7 @@ export const initialJobs = [
     type: 'Full-time',
     budget: '$3,000 - $5,000 / month',
     description: 'We are looking for an experienced React developer to help build our next-generation web client.',
-    skills: ['React', 'Tailwind', 'Redux'],
+    skills: ['React', 'Tailwind', 'Redux', 'TypeScript'],
     postedAt: '2 days ago',
     category: 'Web Development',
     status: 'open',
@@ -50,6 +51,116 @@ export const initialJobs = [
     category: 'Design',
     status: 'open',
     applicants: 42
+  },
+  {
+    id: 5,
+    title: 'Full Stack MERN Developer',
+    company: 'CodeWizards',
+    type: 'Full-time',
+    budget: '$4,000 - $6,000 / month',
+    description: 'Join our dynamic team building e-commerce solutions. Expert knowledge of MongoDB, Express, React, and Node is mandatory.',
+    skills: ['MongoDB', 'Express', 'React', 'Node.js'],
+    postedAt: '1 day ago',
+    category: 'Web Development',
+    status: 'open',
+    applicants: 18
+  },
+  {
+    id: 6,
+    title: 'Python Data Scientist',
+    company: 'DataLens AI',
+    type: 'Contract',
+    budget: '$60 - $100 / hr',
+    description: 'Analyze large datasets and build predictive models for our fintech platform.',
+    skills: ['Python', 'Pandas', 'Scikit-Learn', 'TensorFlow'],
+    postedAt: '6 hours ago',
+    category: 'Data Science',
+    status: 'open',
+    applicants: 15
+  },
+
+  // INTERNSHIPS
+  {
+    id: 7,
+    title: 'Frontend Development Intern',
+    company: 'GlobeTech',
+    type: 'Internship',
+    stipend: '$800 / month',
+    duration: '6 Months',
+    description: 'Perfect for students! Learn modern frontend development with React and Next.js under senior mentorship.',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    postedAt: 'Just now',
+    category: 'Web Development',
+    status: 'open',
+    applicants: 30
+  },
+  {
+    id: 8,
+    title: 'Digital Marketing Intern',
+    company: 'SocialPulse',
+    type: 'Internship',
+    stipend: '$500 / month',
+    duration: '3 Months',
+    description: 'Learn SEO, SEM, and social media management in a fast-paced agency environment.',
+    skills: ['SEO', 'Content Writing', 'Social Media'],
+    postedAt: '1 day ago',
+    category: 'Marketing',
+    status: 'open',
+    applicants: 22
+  },
+  {
+    id: 9,
+    title: 'Product Management Intern',
+    company: 'Innovate AI',
+    type: 'Internship',
+    stipend: '$1,200 / month',
+    duration: '4 Months',
+    description: 'Assist in drafting product requirements and conducting market research for our new AI products.',
+    skills: ['Product Research', 'Agile', 'Communication'],
+    postedAt: '1 week ago',
+    category: 'Management',
+    status: 'open',
+    applicants: 14
+  },
+  {
+    id: 10,
+    title: 'Cybersecurity Intern',
+    company: 'SecureNet',
+    type: 'Internship',
+    stipend: '$1,000 / month',
+    duration: '6 Months',
+    description: 'Work with the security team to perform vulnerability assessments and monitoring.',
+    skills: ['Networking', 'Security+', 'Linux'],
+    postedAt: '2 days ago',
+    category: 'Security',
+    status: 'open',
+    applicants: 9
+  },
+  {
+    id: 11,
+    title: 'Content Creator (Freelance)',
+    company: 'Vlogly',
+    type: 'Project',
+    budget: '$50 - $150 / video',
+    description: 'Edit and produce short-form video content for TikTok and Instagram Reels.',
+    skills: ['Premiere Pro', 'After Effects', 'Short-form Video'],
+    postedAt: '3 hours ago',
+    category: 'Content Creation',
+    status: 'open',
+    applicants: 7
+  },
+  {
+    id: 12,
+    title: 'Blockchain Smart Contract Dev',
+    company: 'DeFi Labs',
+    type: 'Contract',
+    budget: '$100 - $180 / hr',
+    description: 'Develop and audit Solidity smart contracts for decentralized finance protocols.',
+    skills: ['Solidity', 'Ethereum', 'Smart Contracts'],
+    postedAt: '12 hours ago',
+    category: 'Web3',
+    status: 'open',
+    applicants: 11
   }
 ];
 
@@ -59,8 +170,8 @@ export const initialUsers = [
     name: 'Akshay Mundra',
     role: 'Freelancer',
     email: 'akshay@example.com',
-    skills: ['React', 'Node.js', 'Tailwind', 'Figma'],
-    bio: 'Full-stack developer with a passion for building beautiful and scalable web applications.',
+    skills: ['React', 'Node.js', 'Tailwind', 'Figma', 'Three.js'],
+    bio: 'Full-stack developer with a passion for building beautiful and scalable web applications. Specialist in 3D Web & Interactive UI.',
     earnings: 12500,
     rating: 4.9,
     completedJobs: 24,
@@ -124,3 +235,4 @@ export const initialNotifications = [
     timestamp: new Date(Date.now() - 3600000).toISOString()
   }
 ];
+

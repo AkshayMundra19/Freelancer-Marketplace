@@ -126,6 +126,28 @@ const JobDetails = () => {
               </p>
             </div>
 
+            <div className="mb-10">
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-2">Project Execution Timeline</h3>
+              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:to-transparent">
+                {[
+                  { title: "Onboarding & Kickoff", desc: "Initial meeting and project discovery phase.", status: "completed" },
+                  { title: "Design/Architecture Review", desc: "Detailed technical architecture and design mockups.", status: "current" },
+                  { title: "Development Phase 1", desc: "Core feature implementation and MVP delivery.", status: "upcoming" },
+                  { title: "QA & Final Delivery", desc: "Final testing, deployment and handover.", status: "upcoming" }
+                ].map((milestone, idx) => (
+                  <div key={idx} className="relative pl-12">
+                    <div className={`absolute left-0 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-900 ${milestone.status === 'completed' ? 'bg-primary text-white' : milestone.status === 'current' ? 'bg-primary/20 text-primary border-primary animate-pulse' : 'bg-slate-100 dark:bg-slate-800 text-slate-400'}`}>
+                      {milestone.status === 'completed' ? <span className="text-xs font-bold">✓</span> : <span className="text-xs font-bold">{idx + 1}</span>}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 dark:text-white leading-none mb-2">{milestone.title}</h4>
+                      <p className="text-sm text-slate-500 font-medium">{milestone.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div>
               <h3 className="text-xl font-bold mb-4">Desired Skills</h3>
               <div className="flex flex-wrap gap-3">
@@ -136,6 +158,7 @@ const JobDetails = () => {
                 ))}
               </div>
             </div>
+
           </div>
         </motion.div>
 
