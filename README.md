@@ -1,4 +1,4 @@
-## Freelncer Marketplace
+## Freelancer Marketplace
 
 ## Files included
 
